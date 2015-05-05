@@ -18,17 +18,16 @@ enum MultimediaType {
 		return types;
 	}
 
-	public static MultimediaType typeChoose(String str) {
+	public static MultimediaType parseTypeString(String str) {
 
 		for (MultimediaType iterable_element : MultimediaType.values()) {
 			String[] str1;
 			str1 = iterable_element.getTypes();
-			for (int i = 0; i < str1.length; i++) {
-				if (str.equals(str1[i])) {
+			for (String string : str1) {
+				if (str.equals(string)) {
 
 					return iterable_element;
 				}
-
 			}
 		}
 
@@ -46,7 +45,7 @@ public class MultimediaTypeAdviser {
 			File newFile = new File(path);
 
 			System.out.println(MultimediaType
-					.typeChoose(format(fileChecker(newFile))));
+					.parseTypeString(format(fileChecker(newFile))));
 		} else {
 			System.err.println("Incorrect Input");
 		}
