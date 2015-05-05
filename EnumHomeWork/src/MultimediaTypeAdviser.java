@@ -21,8 +21,7 @@ enum MultimediaType {
 	public static MultimediaType parseTypeString(String str) {
 
 		for (MultimediaType iterable_element : MultimediaType.values()) {
-			String[] str1;
-			str1 = iterable_element.getTypes();
+			String[] str1 = iterable_element.getTypes();
 			for (String string : str1) {
 				if (str.equals(string)) {
 
