@@ -18,7 +18,7 @@ enum MultimediaType {
 		return types;
 	}
 
-	public static String typeChoose(String str) {
+	public static MultimediaType typeChoose(String str) {
 
 		for (MultimediaType iterable_element : MultimediaType.values()) {
 			String[] str1;
@@ -26,7 +26,7 @@ enum MultimediaType {
 			for (int i = 0; i < str1.length; i++) {
 				if (str.equals(str1[i])) {
 
-					return str;
+					return iterable_element;
 				}
 
 			}
